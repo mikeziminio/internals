@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "internals"
+version = "0.1.0"
+description = ""
+authors = ["Mike Zimin <mikeziminio@gmail.com>"]
+readme = "../README.md"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+setuptools = "~52.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

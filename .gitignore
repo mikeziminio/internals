@@ -1,0 +1,9 @@
+.idea/
+.vscode/
+src/.venv/
+src/build/
+src/internals.egg-info/
+src/dist/
+__pycache__
+
+*.lock

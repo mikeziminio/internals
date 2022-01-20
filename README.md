@@ -13,8 +13,27 @@ sudo apt-get install python3.10-distutils
 
 ```bash
 cd src
-poetry install
 . ./.venv/bin/activate
-python setup.py build_ext    # компиляция в папку build
-python setup.py install      # установка в .venv
+poetry env use 3.10           # при необходимости
+poetry install
+python setup.py build_ext     # компиляция в папку build
+python setup.py install       # установка в .venv
 ```
+
+Сборка wheel через cibuildwheel:
+https://cibuildwheel.readthedocs.io/en/stable/setup/
+
+```bash
+cibuildwheel --platform linux  
+```
+
+Возможно, не имеет смысла запускать, для загрузки потому что pypi принимает только manylinux wheel.
+```bash
+python setup.py bdist_wheel 
+```
+
+```bash
+python setup.py sdist         # создаем 
+python -m twine upload --repository python-internals dist/*
+```
+

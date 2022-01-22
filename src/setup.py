@@ -9,7 +9,7 @@ setup(
     ext_modules=[
         Extension(
             'internals',
-            ['c/internals.c', 'c/common.c'],
+            ['c/internals.c', 'c/common.c', 'c/inspect.c'],
             include_dirs=[python_include, "c"],
             extra_compile_args=["-O3"]
         )

@@ -1,5 +1,4 @@
-#include "common.h"
-#include "terminal-c.h"
+#include "internals.h"
 
 void vprintf_color(char* color, char* msg, va_list args)
 {

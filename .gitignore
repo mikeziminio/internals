@@ -5,7 +5,9 @@ src/build/
 src/wheelhouse/
 src/*.egg-info/
 src/dist/
-__pycache__
+__pycache__/
 
 *.lock
 *.toml
+
+.ct

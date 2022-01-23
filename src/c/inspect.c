@@ -112,11 +112,12 @@ Pin_inspect_PyLongObject(PyObject *self, PyObject *args)
     printf_no("  ob_refcnt: %ld\n", obj->ob_base.ob_refcnt);
     printf_no("  ob_type: ref(%ld) %s\n", (Py_ssize_t) obj->ob_base.ob_type, s);
     printf_gr("  </PyObject_HEAD>\n");
+    printf_no("  ob_refcnt: %ld\n", obj->ob_base.ob_refcnt);
     printf_gr("  <_PyLongValue>\n");
         uintptr_t lv_tag; /* Number of digits, sign and flags */
     digit ob_digit[1];
 
-    printf_gr("  </_PyLongValue>\n);
+    printf_gr("  </_PyLongValue>\n");
     printf_bl("  ob_type → struct PyObjectType\n");
     printf_gr("      ...\n");
     printf_no("      tp_name: \"%s\"\n", obj->ob_base.ob_type->tp_name);
